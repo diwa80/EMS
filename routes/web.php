@@ -16,9 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/admin/roles', function () {
-    return view('admin.roles.deleted.index');
-});
+
 
 
 Auth::routes();
@@ -60,6 +58,18 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::get('apply-leave',['uses' => 'ApplyleaveController@index', 'as' => 'apply-leave']);
     Route::get('apply-leave/create',['uses' => 'ApplyleaveController@create', 'as' => 'apply-leave/create']);
     Route::post('apply-leave/store',['uses' => 'ApplyleaveController@store', 'as' => 'apply-leave/store']);
+
+
+    // test
+    Route::get('test/create', ['uses' => 'TestController@create', 'as' => 'test/create']);
+    Route::get('test/show/{id}', ['uses' => 'TestController@show', 'as' => 'test/show']);
+
+    // assigned_task
+    Route::get('assigned_task', ['uses' => 'Assigned_taskController@index', 'as' => 'assigned_task']);
+
+    // Assign_task
+    Route::get('assign_task', ['uses' => 'Assign_taskController@index', 'as' => 'assign_task']);
+
 
 
 

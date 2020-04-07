@@ -24,6 +24,18 @@
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('admin/css/style-responsive.css')}}" rel="stylesheet" />
 
+    <link href="{{asset( 'admin/assets/jquery-multi-select/css/multi-select.css' )}}"  rel="stylesheet" />
+    <link href="{{asset( 'admin/assets/select2/css/select2.min.css' )}}"  rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="{{asset('admin/css/jquery.steps.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('admin/assets/bootstrap-datepicker/css/datepicker.css')}}" />
+
+    <link href="{{asset('admin/assets/advanced-datatable/media/css/demo_page.css')}}" rel="stylesheet" />
+    <link href="{{asset('admin/assets/advanced-datatable/media/css/demo_table.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{asset('admin/assets/data-tables/DT_bootstrap.css')}}" />
+
+
+
     @yield('styles')
   </head>
 

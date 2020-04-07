@@ -61,11 +61,11 @@
                           <span>Tasks</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="{{ route('users') }}">Assign Task</a></li> 
+                          <li><a  href="{{route('assign_task')}}">Assign Task</a></li> 
                       </ul>
 
                       <ul class="sub">
-                          <li><a  href="#">Task Assigned</a></li> 
+                          <li><a  href="{{route('assigned_task')}}">Task Assigned</a></li> 
                       </ul>
                   </li>
 

@@ -112,6 +112,8 @@ class UserController extends Controller
         $users -> email = request()->input('email');
         $users-> password = Hash::make($request->password);
         
+        $role = config('roles.models.role')::where('name', '=', 'User')->first();  //choose the default role upon user creation.
+        $user->attachRole($role);
 
         if(request()->hasFile('avatar')){
            

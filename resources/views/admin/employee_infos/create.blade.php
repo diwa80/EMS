@@ -1,8 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{asset('admin/css/jquery.steps.css')}}" />
-<link rel="stylesheet" type="text/css" href="{{asset('admin/assets/bootstrap-datepicker/css/datepicker.css')}}" />
+
 
 @endsection
 
