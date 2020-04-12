@@ -69,6 +69,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
     // Assign_task
     Route::get('assign_task', ['uses' => 'Assign_taskController@index', 'as' => 'assign_task']);
+    Route::get('assign_task/create', ['uses' => 'Assign_taskController@create', 'as' => 'assign_task/create']);
+    Route::post('assign_task/store', ['uses' => 'Assign_taskController@store', 'as' => 'assign_task/store']);
 
 
 

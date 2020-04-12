@@ -17,6 +17,8 @@
     <link href="{{asset('admin/css/bootstrap-reset.css')}}" rel="stylesheet">
     <!--external css-->
     <link href="{{asset('admin/assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/file-uploader/css/jquery.fileupload.css">
+
     <link href="{{asset('admin/assets/jquery-file-upload/css/jquery.fileupload-ui.css')}}" rel="stylesheet" type="text/css" >
     <!--right slidebar-->
     <link href="{{asset('admin/css/slidebars.css')}}" rel="stylesheet">
@@ -36,7 +38,14 @@
 
 
 
-    @yield('styles')
+
+
+
+
+
+
+
+    @yield('css')
   </head>
 
   <body>
@@ -66,9 +75,13 @@
     <script src="{{asset('admin/js/jquery.nicescroll.js')}}" type="text/javascript"></script>
     <script src="{{asset('admin/js/respond.min.js')}}" ></script>
 
-
+    <script src="{{asset('js/advanced-form-components.js')}}"></script>
     <!--common script for all pages-->
     <script src="{{asset('admin/js/common-scripts.js')}}"></script>
+
+ 
+    
+
 
     @yield('js')
 

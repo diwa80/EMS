@@ -14,4 +14,8 @@ class Employee_infos extends Model
 
     protected $dates=['deleted_at'];
 
+    public function assign_tasks(){
+        return $this ->belongsTo('App\Model\Assign_task');
+    }
+
 }

@@ -1,7 +1,7 @@
 <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
+              <ul class="light-sidebar-nav sidebar-menu" id="nav-accordion">
                   <li>
                       <a href="{{ route('dashboard') }}">
                           <i class="fa fa-dashboard"></i>
@@ -61,11 +61,11 @@
                           <span>Tasks</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="{{route('assign_task')}}">Assign Task</a></li> 
+                          <li><a  href="{{route('assign_task/create')}}">Assign Task</a></li> 
                       </ul>
 
                       <ul class="sub">
-                          <li><a  href="{{route('assigned_task')}}">Task Assigned</a></li> 
+                          <li><a  href="{{route('assign_task')}}">Task Assigned</a></li> 
                       </ul>
                   </li>
 

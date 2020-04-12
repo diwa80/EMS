@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Model\Admin\Assign_task;
+use App\Model\Admin\Employee_infos;
+use App\User;
+use Illuminate\Support\Facades\DB;
+
 
 class Assign_taskController extends Controller
 {
@@ -14,7 +19,13 @@ class Assign_taskController extends Controller
      */
     public function index()
     {
-        return view('admin.task.index');
+       
+        $assign_tasks = new Assign_task();
+        $assign_tasks = Assign_task::all();
+        return view('admin.task.index')->with('assign_tasks', $assign_tasks);
+
+        
+        
     }
 
     /**
@@ -24,7 +35,7 @@ class Assign_taskController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.task.assign_task')->with('users', User::all());
     }
 
     /**
@@ -35,7 +46,14 @@ class Assign_taskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $assign_tasks = new Assign_task();
+        $assign_tasks ->employee = request()->input('employee');
+        $assign_tasks ->tasks = request()->input('tasks');
+
+        $assign_tasks->save();
+
+        return redirect()->route('assign_task');
+
     }
 
     /**
